@@ -13,3 +13,21 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
  * `cdk deploy`      deploy this stack to your default AWS account/region
  * `cdk diff`        compare deployed stack with current state
  * `cdk synth`       emits the synthesized CloudFormation template
+
+## Steps
+
+* Clone the repo
+* npm i
+* cdk bootstrap
+* cdk synth
+* npm run watch
+* cdk diff
+* cdk deploy
+
+# Releases
+
+## [v1.0 - Lambda and API Gateway are created](https://github.com/Ayyappu/cdk-workshop/releases/tag/v1.0)
+
+After deploy, get the API Gateway url from the console output and run `curl <url>/abc` in bash.
+
+Output: **Hello, CDK! You've hit /abc.**
