@@ -19,7 +19,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * Clone the repo
 * npm i
 * npm run watch
-* Update profile in **.aws\credentials** file
+* Update **[default]** profile in **.aws\credentials** file
 * cdk bootstrap
 * cdk synth
 * cdk diff
