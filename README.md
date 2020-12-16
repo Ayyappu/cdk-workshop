@@ -18,9 +18,9 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 * Clone the repo
 * npm i
+* npm run watch
 * cdk bootstrap
 * cdk synth
-* npm run watch
 * cdk diff
 * cdk deploy
 
