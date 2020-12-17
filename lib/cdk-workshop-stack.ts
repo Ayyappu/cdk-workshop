@@ -1,21 +1,20 @@
 import * as cdk from '@aws-cdk/core';
-import * as lambda from '@aws-cdk/aws-lambda';
-import * as apigw from '@aws-cdk/aws-apigateway';
+import { Bucket, IBucket } from '@aws-cdk/aws-s3';
+import { BucketDeployment, Source } from '@aws-cdk/aws-s3-deployment';
 
 export class CdkWorkshopStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // Lambda
-    const hello = new lambda.Function(this, 'HelloHandler', {
-      runtime: lambda.Runtime.NODEJS_10_X,
-      code: lambda.Code.fromAsset('lambda'),
-      handler: 'hello.handler'
+    // Create S3 bucket
+    const cdkWorkshopS3Bucket : IBucket = new Bucket(this, 'CdkWorkshopWebsiteBucket', {
+      bucketName: 'cdk-workshop-website-bucket'
     });
 
-    // Api Gateway
-    new apigw.LambdaRestApi(this, 'Endpoint', {
-      handler: hello
+    // Upload file 1 to the bucket above
+    const imageRose = new BucketDeployment(this, 'DeployFiles', {
+      sources: [Source.asset('./files/images')],
+      destinationBucket: cdkWorkshopS3Bucket
     });
   }
 }
