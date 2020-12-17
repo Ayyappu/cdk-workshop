@@ -31,8 +31,6 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 Unit tests are updated.
 
-Output: **Hello, CDK! You've hit /abc.**
-
 ## [v1.0](https://github.com/Ayyappu/cdk-workshop/releases/tag/v1.0)
 
 Lambda and API Gateway are created
