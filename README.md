@@ -27,9 +27,20 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 # Releases
 
-## [v1.1](https://github.com/Ayyappu/cdk-workshop/releases/tag/v1.1)
+## [v2.0](https://github.com/Ayyappu/cdk-workshop/releases/tag/v2.0)
 
 Unit tests are updated.
+
+## [v1.1](https://github.com/Ayyappu/cdk-workshop/releases/tag/v1.1)
+
+Static hosted S3 Bucket through CloudFront.
+
+- Added an S3 bucket
+- Uploaded files into the bucket
+- Created CloudFront Distribution
+- Created CloudFront Origin Access Identity
+- Deploy this stack by running cdk deploy
+- After deployment, load <CloudFrontDomainName>/rose.jpg in the browser. This will load the file, from S3 bucket, in the browser
 
 ## [v1.0](https://github.com/Ayyappu/cdk-workshop/releases/tag/v1.0)
 
