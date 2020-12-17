@@ -12,3 +12,15 @@ test('S3 bucket is created', () => {
     ShouldNotExist: ABSENT
   }));
 });
+
+test('CloudFront Distribution is created', () => {
+  const app = new cdk.App();
+  const stack = new CdkWorkshop.CdkWorkshopStack(app, 'MyTestStack');
+  expectCDK(stack).to(haveResource('AWS::CloudFront::Distribution'));
+});
+
+test('CloudFront OriginAccessIdentity is created', () => {
+  const app = new cdk.App();
+  const stack = new CdkWorkshop.CdkWorkshopStack(app, 'MyTestStack');
+  expectCDK(stack).to(haveResource('AWS::CloudFront::CloudFrontOriginAccessIdentity'));
+}); 
