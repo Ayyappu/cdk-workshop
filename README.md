@@ -29,9 +29,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 ## [v1.1](https://github.com/Ayyappu/cdk-workshop/releases/tag/v1.1)
 
-Lambda and API Gateway are created (Unit tests are updated)
-
-After deploy, get the API Gateway url from the console output and run `curl <url>/abc` in bash.
+Unit tests are updated.
 
 Output: **Hello, CDK! You've hit /abc.**
 
